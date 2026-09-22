@@ -1,0 +1,146 @@
+.compose-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.compose-modal.active {
+  display: flex;
+}
+
+.compose-window {
+  background-color: white;
+  border-radius: 12px;
+  width: 640px;
+  max-width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.compose-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  background-color: #f1f3f4;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.compose-header h3 {
+  font-size: 14px;
+  color: #202124;
+  font-weight: 500;
+}
+
+.compose-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #5f6368;
+  padding: 4px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.compose-close:hover {
+  background-color: #e8eaed;
+}
+
+.compose-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: #fff;
+}
+
+.compose-field {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.compose-field label {
+  font-size: 12px;
+  color: #5f6368;
+  width: 54px;
+  flex-shrink: 0;
+}
+
+.compose-field input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+.compose-field input:focus {
+  border-bottom-color: #1a73e8;
+}
+
+.compose-textarea {
+  width: 100%;
+  min-height: 220px;
+  border: none;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  padding: 10px 0;
+  background: transparent;
+}
+
+.compose-footer {
+  padding: 14px 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #f1f3f4;
+  background: #fff;
+}
+
+.compose-footer button {
+  padding: 9px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-send {
+  background-color: #1a73e8;
+  color: white;
+  font-weight: 500;
+}
+
+.btn-send:hover {
+  background-color: #1557b0;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: #5f6368;
+}
+
+.btn-cancel:hover {
+  background-color: #f1f3f4;
+}
