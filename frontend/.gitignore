@@ -1,15 +1,18 @@
 # Dependencias
-node_modules/
-package-lock.json
-yarn.lock
+frontend/node_modules/
+frontend/package-lock.json
+frontend/yarn.lock
 
 # Builds
-dist/
-build/
-.next/
-out/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/out/
 
 # Entorno
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
 .env
 .env.local
 .env.*.local
@@ -29,7 +32,7 @@ yarn-error.log*
 .idea/
 *.swp
 
-# Capacitor (si usas app nativa)
-android/
-ios/
-.capacitor/
+# Capacitor (nativo generado)
+frontend/android/
+frontend/ios/
+frontend/.capacitor/
