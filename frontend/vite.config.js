@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     VitePWA({
@@ -16,25 +17,12 @@ export default defineConfig({
         background_color: '#0f1115',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/',
-        scope: '/',
+        start_url: './',
+        scope: './',
         icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
+          { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
+          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
         ]
       },
       workbox: {
@@ -45,10 +33,7 @@ export default defineConfig({
             handler: 'CacheFirst',
             options: {
               cacheName: 'cinemex-images',
-              expiration: {
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 30
-              }
+              expiration: { maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 30 }
             }
           },
           {
@@ -56,10 +41,7 @@ export default defineConfig({
             handler: 'NetworkFirst',
             options: {
               cacheName: 'cinemex-api',
-              expiration: {
-                maxEntries: 20,
-                maxAgeSeconds: 60 * 60 * 24
-              }
+              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 }
             }
           }
         ]
